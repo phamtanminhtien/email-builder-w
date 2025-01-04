@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "declaration": true, // Ensure this is true to generate declaration files
+    "declarationMap": true, // Create a .d.ts.map for debugging
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false, // Emit files to output directory
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"]
+    },
+    "types": ["node"] // Include Node.js types if needed for build config
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

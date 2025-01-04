@@ -1,13 +1,13 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 
-import App from "./App";
+import App, { AppProps } from "./App";
 import theme from "./theme";
 
-function EmailBuilderW() {
+function EmailBuilderW(props: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <App />
+      <App {...props} />
     </ThemeProvider>
   );
 }

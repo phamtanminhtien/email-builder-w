@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { Stack, useTheme } from "@mui/material";
 
 import {
+  setState,
+  TValue,
   useInspectorDrawerOpen,
   useSamplesDrawerOpen,
 } from "../documents/editor/EditorContext";
@@ -24,7 +26,17 @@ function useDrawerTransition(
   });
 }
 
-export default function App() {
+export type AppProps = {
+  config?: TValue;
+};
+
+export default function App({ config }: AppProps) {
+  useEffect(() => {
+    if (config) {
+      setState(config);
+    }
+  }, []);
+
   const inspectorDrawerOpen = useInspectorDrawerOpen();
   const samplesDrawerOpen = useSamplesDrawerOpen();
 

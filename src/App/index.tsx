@@ -27,7 +27,7 @@ function useDrawerTransition(
 }
 
 export type AppProps = {
-  config?: TValue;
+  config?: Partial<TValue>;
 };
 
 export default function App({ config }: AppProps) {

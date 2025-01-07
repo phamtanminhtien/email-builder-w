@@ -29,10 +29,11 @@ function useDrawerTransition(
 export type AppProps = {
   config?: Partial<TValue>;
   samplesDrawer?: JSX.Element;
-  saveButton?: (data: string) => JSX.Element;
+  rightTool?: JSX.Element;
+  leftTool?: JSX.Element;
 };
 
-export default function App({ config, samplesDrawer, saveButton }: AppProps) {
+export default function App({ config, samplesDrawer, rightTool }: AppProps) {
   useEffect(() => {
     if (config) {
       setState(config);
@@ -70,7 +71,8 @@ export default function App({ config, samplesDrawer, saveButton }: AppProps) {
       >
         <TemplatePanel
           showToggleSamplesPanelButton={!!samplesDrawer}
-          saveButton={saveButton}
+          rightTool={rightTool}
+          leftTool={rightTool}
         />
       </Stack>
     </>

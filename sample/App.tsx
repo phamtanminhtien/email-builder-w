@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import EmailBuilderW from "../src/EmailBuilderW";
+import { useDocument } from "../src/documents/editor/EditorContext";
 
 const App = () => {
   return (

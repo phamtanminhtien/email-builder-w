@@ -22,16 +22,17 @@ import ToggleSamplesPanelButton from "../SamplesDrawer/ToggleSamplesPanelButton"
 import HtmlPanel from "./HtmlPanel";
 import JsonPanel from "./JsonPanel";
 import MainTabsGroup from "./MainTabsGroup";
-import SaveButtonWrapped from "./SaveButtonWrapped";
 
 type Props = {
   showToggleSamplesPanelButton?: boolean;
-  saveButton?: (data: string) => JSX.Element;
+  rightTool?: JSX.Element;
+  leftTool?: JSX.Element;
 };
 
 export default function TemplatePanel({
   showToggleSamplesPanelButton = true,
-  saveButton,
+  rightTool,
+  leftTool,
 }: Props) {
   const document = useDocument();
   const selectedMainTab = useSelectedMainTab();
@@ -109,6 +110,7 @@ export default function TemplatePanel({
           justifyContent="space-between"
           alignItems="center"
         >
+          {leftTool}
           <Stack direction="row" spacing={2}>
             <MainTabsGroup />
           </Stack>
@@ -133,7 +135,7 @@ export default function TemplatePanel({
               </ToggleButton>
             </ToggleButtonGroup>
             {/* <ShareButton /> */}
-            {saveButton && <SaveButtonWrapped saveButton={saveButton} />}
+            {rightTool}
           </Stack>
         </Stack>
         <ToggleInspectorPanelButton />

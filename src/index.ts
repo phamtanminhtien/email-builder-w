@@ -1,3 +1,41 @@
 import EmailBuilderW from "./EmailBuilderW";
+import {
+  useDocument,
+  resetDocument,
+  setDocument,
+  setSelectedBlockId,
+  setSelectedMainTab,
+  setSelectedScreenSize,
+  setSidebarTab,
+  setState,
+  toggleInspectorDrawerOpen,
+  toggleSamplesDrawerOpen,
+  useInspectorDrawerOpen,
+  useSamplesDrawerOpen,
+  useSelectedBlockId,
+  useSelectedMainTab,
+  useSelectedScreenSize,
+  useSelectedSidebarTab,
+  useTools,
+} from "./documents/editor/EditorContext";
 
 export { EmailBuilderW };
+export {
+  useDocument,
+  resetDocument,
+  setDocument,
+  setSelectedBlockId,
+  setSelectedMainTab,
+  setSelectedScreenSize,
+  setSidebarTab,
+  setState,
+  toggleInspectorDrawerOpen,
+  toggleSamplesDrawerOpen,
+  useInspectorDrawerOpen,
+  useSamplesDrawerOpen,
+  useSelectedBlockId,
+  useSelectedMainTab,
+  useSelectedScreenSize,
+  useSelectedSidebarTab,
+  useTools,
+};

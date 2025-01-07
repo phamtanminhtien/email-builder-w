@@ -23,13 +23,16 @@ export default function UploadImageInput({
   const [uploading, setUploading] = useState(false);
   const [value, setValue] = useState(defaultValue);
 
-  const onUpload = (file: File) => {
+  const onUpload = async (file: File) => {
+    if (!uploadImage) {
+      return;
+    }
+
     try {
       setUploading(true);
-      uploadImage?.onUpload(file).then((url) => {
-        setValue(url);
-        onChange(url);
-      });
+      const url = await uploadImage.onUpload(file);
+      setValue(url);
+      onChange(url);
     } catch (error) {
       uploadImage?.onError?.(error);
     } finally {

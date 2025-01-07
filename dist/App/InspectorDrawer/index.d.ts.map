@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/App/InspectorDrawer/index.tsx"],"names":[],"mappings":"AASA,eAAO,MAAM,sBAAsB,MAAM,CAAC;AAE1C,MAAM,CAAC,OAAO,UAAU,eAAe,4CAmCtC"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/App/InspectorDrawer/index.tsx"],"names":[],"mappings":"AAYA,OAAO,EAAE,WAAW,EAAE,MAAM,mEAAmE,CAAC;AAEhG,eAAO,MAAM,sBAAsB,MAAM,CAAC;AAE1C,KAAK,KAAK,GAAG;IACX,WAAW,CAAC,EAAE,WAAW,CAAC;CAC3B,CAAC;AAEF,MAAM,CAAC,OAAO,UAAU,eAAe,CAAC,EAAE,WAAW,EAAE,EAAE,KAAK,2CAmD7D"}

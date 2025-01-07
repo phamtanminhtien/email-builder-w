@@ -1,1 +1,1 @@
-{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/App/SamplesDrawer/index.tsx"],"names":[],"mappings":"AASA,eAAO,MAAM,oBAAoB,MAAM,CAAC;AAExC,MAAM,CAAC,OAAO,UAAU,aAAa,4CAmEpC"}
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/App/SamplesDrawer/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAiB1B,eAAO,MAAM,oBAAoB,MAAM,CAAC;AAExC,KAAK,KAAK,GAAG;IACX,aAAa,EAAE,KAAK,CAAC,SAAS,CAAC;CAChC,CAAC;AAEF,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,EAAE,aAAa,EAAE,EAAE,KAAK,2CAkC7D"}

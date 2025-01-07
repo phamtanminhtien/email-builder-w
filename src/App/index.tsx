@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { Stack, useTheme } from "@mui/material";
 
@@ -28,9 +28,11 @@ function useDrawerTransition(
 
 export type AppProps = {
   config?: Partial<TValue>;
+  samplesDrawer?: JSX.Element;
+  saveButton?: (data: string) => JSX.Element;
 };
 
-export default function App({ config }: AppProps) {
+export default function App({ config, samplesDrawer, saveButton }: AppProps) {
   useEffect(() => {
     if (config) {
       setState(config);
@@ -44,6 +46,7 @@ export default function App({ config }: AppProps) {
     "margin-left",
     samplesDrawerOpen
   );
+
   const marginRightTransition = useDrawerTransition(
     "margin-right",
     inspectorDrawerOpen
@@ -52,16 +55,23 @@ export default function App({ config }: AppProps) {
   return (
     <>
       <InspectorDrawer />
-      <SamplesDrawer />
+      {samplesDrawer && <SamplesDrawer samplesDrawer={samplesDrawer} />}
 
       <Stack
         sx={{
           marginRight: inspectorDrawerOpen ? `${INSPECTOR_DRAWER_WIDTH}px` : 0,
-          marginLeft: samplesDrawerOpen ? `${SAMPLES_DRAWER_WIDTH}px` : 0,
+          marginLeft: samplesDrawer
+            ? samplesDrawerOpen
+              ? `${SAMPLES_DRAWER_WIDTH}px`
+              : 0
+            : 0,
           transition: [marginLeftTransition, marginRightTransition].join(", "),
         }}
       >
-        <TemplatePanel />
+        <TemplatePanel
+          showToggleSamplesPanelButton={!!samplesDrawer}
+          saveButton={saveButton}
+        />
       </Stack>
     </>
   );

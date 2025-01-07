@@ -18,9 +18,11 @@ import {
   useSelectedSidebarTab,
   useTools,
 } from "./documents/editor/EditorContext";
+import EMPTY_EMAIL_MESSAGE from "./getConfiguration/sample/empty-email-message";
 
-export { EmailBuilderW };
 export {
+  EMPTY_EMAIL_MESSAGE,
+  EmailBuilderW,
   useDocument,
   resetDocument,
   setDocument,

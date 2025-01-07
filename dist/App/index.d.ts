@@ -5,5 +5,5 @@ export type AppProps = {
     rightTool?: JSX.Element;
     leftTool?: JSX.Element;
 };
-export default function App({ config, samplesDrawer, rightTool }: AppProps): import("react/jsx-runtime").JSX.Element;
+export default function App({ config, samplesDrawer, rightTool, leftTool, }: AppProps): import("react/jsx-runtime").JSX.Element;
 //# sourceMappingURL=index.d.ts.map

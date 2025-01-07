@@ -33,7 +33,12 @@ export type AppProps = {
   leftTool?: JSX.Element;
 };
 
-export default function App({ config, samplesDrawer, rightTool }: AppProps) {
+export default function App({
+  config,
+  samplesDrawer,
+  rightTool,
+  leftTool,
+}: AppProps) {
   useEffect(() => {
     if (config) {
       setState(config);
@@ -72,7 +77,7 @@ export default function App({ config, samplesDrawer, rightTool }: AppProps) {
         <TemplatePanel
           showToggleSamplesPanelButton={!!samplesDrawer}
           rightTool={rightTool}
-          leftTool={rightTool}
+          leftTool={leftTool}
         />
       </Stack>
     </>

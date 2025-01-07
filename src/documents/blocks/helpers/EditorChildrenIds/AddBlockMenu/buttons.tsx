@@ -70,7 +70,7 @@ export const BUTTONS: TButtonProps[] = [
       type: "Image",
       data: {
         props: {
-          url: "https://rhine-ai.com/Rhine-Sale.jpeg",
+          url: "https://rhine-ai.com/crm-power-full-desktop.png",
           alt: "Sample product",
           contentAlignment: "middle",
           linkHref: null,

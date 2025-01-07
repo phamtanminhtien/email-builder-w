@@ -42,6 +42,7 @@ export default function UploadImageInput({
       <input
         disabled={uploading}
         type="file"
+        accept="image/png, image/jpeg, image/jpg"
         hidden
         onChange={(e) => {
           const file = e.target.files?.[0];

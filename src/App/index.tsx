@@ -12,6 +12,7 @@ import {
 import InspectorDrawer, { INSPECTOR_DRAWER_WIDTH } from "./InspectorDrawer";
 import SamplesDrawer, { SAMPLES_DRAWER_WIDTH } from "./SamplesDrawer";
 import TemplatePanel from "./TemplatePanel";
+import { UploadImage } from "./InspectorDrawer/ConfigurationPanel/input-panels/helpers/inputs/UploadImageInput";
 
 function useDrawerTransition(
   cssProperty: "margin-left" | "margin-right",
@@ -31,6 +32,7 @@ export type AppProps = {
   samplesDrawer?: JSX.Element;
   rightTool?: JSX.Element;
   leftTool?: JSX.Element;
+  uploadImage?: UploadImage;
 };
 
 export default function App({
@@ -38,6 +40,7 @@ export default function App({
   samplesDrawer,
   rightTool,
   leftTool,
+  uploadImage,
 }: AppProps) {
   useEffect(() => {
     if (config) {
@@ -60,7 +63,7 @@ export default function App({
 
   return (
     <>
-      <InspectorDrawer />
+      <InspectorDrawer uploadImage={uploadImage} />
       {samplesDrawer && <SamplesDrawer samplesDrawer={samplesDrawer} />}
 
       <Stack

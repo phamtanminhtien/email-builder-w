@@ -22,6 +22,7 @@ import ToggleSamplesPanelButton from "../SamplesDrawer/ToggleSamplesPanelButton"
 import HtmlPanel from "./HtmlPanel";
 import JsonPanel from "./JsonPanel";
 import MainTabsGroup from "./MainTabsGroup";
+import ImportJson from "./ImportJson";
 
 type Props = {
   showToggleSamplesPanelButton?: boolean;
@@ -115,8 +116,8 @@ export default function TemplatePanel({
             <MainTabsGroup />
           </Stack>
           <Stack direction="row" spacing={2}>
-            {/* <DownloadJson />
-            <ImportJson /> */}
+            {/* <DownloadJson /> */}
+            <ImportJson />
             <ToggleButtonGroup
               value={selectedScreenSize}
               exclusive

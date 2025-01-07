@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import { Box, CircularProgress, InputLabel } from "@mui/material";
 
@@ -19,6 +19,7 @@ export default function UploadImageInput({
   onChange,
   uploadImage,
 }: Props) {
+  const inputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [value, setValue] = useState(defaultValue);
 
@@ -40,6 +41,7 @@ export default function UploadImageInput({
     <Box>
       <InputLabel shrink>{label}</InputLabel>
       <input
+        ref={inputRef}
         disabled={uploading}
         type="file"
         accept="image/png, image/jpeg, image/jpg"
@@ -61,9 +63,9 @@ export default function UploadImageInput({
           position: "relative",
         }}
         onClick={() => {
-          const input = document.createElement("input");
-          input.type = "file";
-          input.click();
+          if (!uploading) {
+            inputRef.current?.click();
+          }
         }}
       >
         <Box
